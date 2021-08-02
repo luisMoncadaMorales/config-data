@@ -6,3 +6,7 @@ spring:
   data:
     mongodb:
       uri: mongodb://admin:123456789@localhost:27017/practicapragma
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8083/eureka/
