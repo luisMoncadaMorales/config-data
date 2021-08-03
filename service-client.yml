@@ -20,7 +20,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: 'hystrix.stream'
+        include: "*"
 hystrix:
   dashboard:
     proxy-stream-allow-list:
