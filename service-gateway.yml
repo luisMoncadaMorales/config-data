@@ -1,0 +1,23 @@
+server:
+  port: 8888
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8083/eureka/
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: service-client
+          uri: lb://service-client
+          predicates:
+            - Path=/apiClient/**
+        - id: service-photo
+          uri: lb://service-photo
+          predicates:
+            - Path=/apiPhoto/**
