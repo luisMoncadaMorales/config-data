@@ -26,3 +26,15 @@ hystrix:
     proxy-stream-allow-list:
       - 'localhost'
 
+sonar:
+  dynamicAnalysis: reuseReports
+  host:
+    url: http://localhost:9000
+  jacoco:
+    reportPath: build/test-reports/jacoco.exec
+  java:
+    coveragePlugin: jacoco
+  junit:
+    reportsPath: build/test-reports
+  login: admin
+  password: admin
